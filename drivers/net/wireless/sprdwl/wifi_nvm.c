@@ -17,8 +17,8 @@
 #define TRUE        1
 #endif
 
-static char *WIFI_CALI_FILE_PRODUCT = "/lib/firmware/postmarketos/sprdwl/connectivity_calibration.ini";
-static char *WIFI_CALI_FILE_SYSTEM = "/lib/firmware/postmarketos/sprdwl/connectivity_calibration.ini";
+static char *WIFI_CALI_FILE_PRODUCT = "/lib/firmware/postmarketos/connectivity_calibration.ini";
+static char *WIFI_CALI_FILE_SYSTEM = "/lib/firmware/postmarketos/connectivity_calibration.ini";
 
 
 static struct wifi_nvm_data g_wifi_nvm_data;
@@ -233,7 +233,7 @@ bool wifi_cali_file_check(const char *path)
 {
 	struct file *filp;
 	struct file *filp_2;
-	const char *path_2 = "/lib/firmware/postmarketos/sprdwl/connectivity_calibration.ini";
+	const char *path_2 = "/lib/firmware/postmarketos/connectivity_calibration.ini";
 	unsigned char *p_buf = NULL;
 	unsigned short len = 0;
 	loff_t pos;
@@ -320,13 +320,13 @@ void sprdwl_nvm_init(void)
 	|| (defined CONFIG_MACH_SP5735C1EA) \
 	|| (defined CONFIG_MACH_SP5735EA)
 	char *WIFI_CONFIG_FILE[] = {
-		"/lib/firmware/postmarketos/sprdwl/connectivity_configure_hw100.ini",
-		"/lib/firmware/postmarketos/sprdwl/connectivity_configure_hw102.ini",
-		"/lib/firmware/postmarketos/sprdwl/connectivity_configure_hw104.ini"
+		"/lib/firmware/postmarketos/connectivity_configure_hw100.ini",
+		"/lib/firmware/postmarketos/connectivity_configure_hw102.ini",
+		"/lib/firmware/postmarketos/connectivity_configure_hw104.ini"
 	};
 #else
 	char *WIFI_CONFIG_FILE[] = {
-		"/lib/firmware/postmarketos/sprdwl/connectivity_configure.ini"
+		"/lib/firmware/postmarketos/connectivity_configure.ini"
 	};
 #endif
 
