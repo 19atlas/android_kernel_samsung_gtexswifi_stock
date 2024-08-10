@@ -4,6 +4,7 @@
 ```
 make gtexswifi-dt_defconfig
 make
+make CFLAGS_MODULE=-fno-pic modules # wifi sprdwl.ko
 ```
 
 
